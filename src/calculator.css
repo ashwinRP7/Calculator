@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+}
+
+.calculatorBox{
+    width: 282px;
+    margin: 200px;
+    border: 1px solid black;
+}
+
+button[name="c"]{
+    width: 280px;
+    height: 70px;
+    padding: 10px;
+    font-size: 40px;
+}
+
+button{
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    font-size: 40px;
+}
+
+.displayAnswer{
+    width: 280px;
+    border: 1px solid #581845;
+    height: 70px;
+    background-color: #581845;
+    color: white;
+    font-size: 40px;
+    text-align: right;
+    padding: 10px;
+}
+
+button:nth-child(4){
+    background-color: #FF5733;
+    color: white;
+}
+
