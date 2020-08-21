@@ -2,21 +2,8 @@ import React from 'react';
 import logo from './logo.svg';
 import './calculator.css';
 import ClearButton from './ClearButton'
-import Key0 from './Key0'
-import Key1 from './Key1'
-import Key2 from './Key2'
-import Key3 from './Key3'
-import Key4 from './Key4'
-import Key5 from './Key5'
-import Key6 from './Key6'
-import Key7 from './Key7'
-import Key8 from './Key8'
-import Key9 from './Key9'
-import KeyMul from './KeyMul'
-import KeySub from './KeySub'
-import KeyAdd from './KeyAdd'
-import KeyEqual from './KeyEqual'
-import KeyDivide from './KeyDivide'
+import Key from './Key'
+
 import AnswerDiv from './AnswerDiv';
 
 class Calculator extends React.Component {
@@ -61,7 +48,6 @@ class Calculator extends React.Component {
             this.setState({displayValue:answer})
         }
     }
-
 
     changeDisplay(inputValue){
         this.setState({
@@ -116,28 +102,28 @@ class Calculator extends React.Component {
               <div className="keys">
                       <ClearButton obj = {()=> this.clearDisplay()}></ClearButton>
                       <div className="row1">
-                            <Key1 obj={()=> this.changeDisplay("1")}></Key1>
-                            <Key2 obj={()=> this.changeDisplay("2")}></Key2>
-                            <Key3 obj={()=> this.changeDisplay("3")}></Key3>
-                            <KeyAdd obj={()=> this.add()}></KeyAdd>                                                        
+                            <Key obj={()=> this.changeDisplay("1")} num="1"></Key>
+                            <Key obj={()=> this.changeDisplay("2")} num="2"></Key>
+                            <Key obj={()=> this.changeDisplay("3")} num="3"></Key>
+                            <Key obj={()=> this.add()} num="+"></Key>                                                                 
                       </div>
                       <div className="row2">
-                          <Key4 obj={()=> this.changeDisplay("4")}></Key4>
-                          <Key5 obj={()=> this.changeDisplay("5")}></Key5>
-                          <Key6 obj={()=> this.changeDisplay("6")}></Key6>
-                          <KeySub obj={()=> this.subtract()}></KeySub>                          
+                          <Key obj={()=> this.changeDisplay("4")} num="4"></Key>
+                          <Key obj={()=> this.changeDisplay("5")} num="5"></Key>
+                          <Key obj={()=> this.changeDisplay("6")} num="6"></Key>
+                          <Key obj={()=> this.subtract()} num="-"></Key>                          
                       </div>
                       <div className="row3">
-                          <Key7 obj={()=> this.changeDisplay("7")}></Key7>
-                          <Key8 obj={()=> this.changeDisplay("8")}></Key8>
-                          <Key9 obj={()=> this.changeDisplay("9")}></Key9>
-                          <KeyMul obj={()=> this.multiply()}></KeyMul>                          
+                          <Key obj={()=> this.changeDisplay("7")} num="7"></Key>
+                          <Key obj={()=> this.changeDisplay("8")} num="8"></Key>
+                          <Key obj={()=> this.changeDisplay("9")} num="9"></Key>
+                          <Key obj={()=> this.multiply()} num="*"></Key>                          
                       </div>
                       <div className="row4">
                           <button name=".">.</button>
-                          <Key0 obj={()=> this.changeDisplay("0")}></Key0>
-                          <KeyEqual obj={()=> this.calculateResult()}></KeyEqual>
-                          <KeyDivide obj={()=> this.divide()}></KeyDivide>
+                          <Key obj={()=> this.changeDisplay("0")} num="0"></Key>
+                          <Key obj={()=> this.calculateResult()} num="="></Key>
+                          <Key obj={()=> this.divide()} num="/"></Key>
                       </div>
                 </div>
             </div>

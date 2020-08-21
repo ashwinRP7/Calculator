@@ -1,17 +1,17 @@
 import React from 'react';
 import logo from './logo.svg';
 
-class Key6 extends React.Component{
+class Key extends React.Component{
     constructor(props){
         super(props);
     }
 
     render(){
         return(
-            <button onClick={this.props.obj} name="6">6</button>
+            <button onClick={this.props.obj} name={this.props.num}>{this.props.num}</button>
         );
     }
 
 }
 
-export default Key6;
+export default Key;
